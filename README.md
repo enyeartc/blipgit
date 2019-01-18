@@ -1,7 +1,7 @@
 # CNN Blip Integration
 Repo for IoT CNN project
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/enyeartc/blipgit/blob/master/screencap.gif)
 
 # Blan Blah
 
