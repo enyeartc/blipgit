@@ -1,23 +1,25 @@
-# CNN Blip Integration
-Repo for IoT CNN project
+# CNN IoT Integration
+The purpose of this project is to integrate an IoT device that I designed (called a Blip) with a CNN.   This will use a Convolution Neural Net (CNN) implemented using Keras with TensorFlow backend to look at a set of Blips, determine the order and display the order on the screen.  A Blip is an IoT device that I created that uses an Electric Imp (https://www.electricimp.com/) chip.  It has LED’s an eInk display and a 3D printed case and a membrain keypad.
+
+You can see it working in the GIF below.  
 
 ![alt text](https://github.com/enyeartc/blipgit/blob/master/screencap.gif)
 
-# Blan Blah
+## Process
+Each blip can display a unique image and display a blip sequence number. The CNN will process an image and determine which of 6 states is in the image.  For this example the unique images are Turtle(T), YingYang(Y), or House(H).  So the 6 states could be TYH, THY, HTY, HYT, YHT, or YTH.   These are the 6 states that the CNN will predict  
 
-For the next two days we will work with the entire end to end pipeline of data science through a case study.  We have touched on aspects of this throughout the course but have not yet put all the pieces together.
+The process (in camera_predict_pub.py):
+* Run camera_predict_pub.py 
+* Program starts camera, user points camera to Blips 
+* Program tells blips to display unique image 
+* Blips display images
+* CNN processes the image
+* CNN predicts one of 6 states
+* Program sends Blips which sequence to display
 
-Topics included in this case study include:
-* Classification modeling.
-* Programming Practice: Handing off models. 
-* Teamwork.
-* Web applications.
-* Website hosting with AWS
-* Deploying a DS application.
-* Data visualization.
-* Results presentation.
 
-#### Rough timeline 
+## Setup 
 
-* Day 1: Project scoping, Team direction, Model building
-* Day 2: Web app and deployment
+* First I created 500 images of each possible state, these images are black and white and 100x200 in size (camera.py)
+* I then trained a CNN on these images (blip_cnn_pub.py)
+* Code for the Blips will not be displayed in this repo
