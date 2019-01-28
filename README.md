@@ -2,6 +2,10 @@
 The purpose of this project is to integrate an IoT device that I designed (called a Blip) with a CNN.   This will use a Convolution Neural Net (CNN) implemented using Keras with TensorFlow backend to look at a set of Blips, determine the order and display the order on the screen.  A Blip is an IoT device that I created that uses an Electric Imp (https://www.electricimp.com/) chip.  It has LED’s an eInk display and a 3D printed case and a membrain keypad.
 
 You can see it working in the GIF below.  
+* First the program displays unique images on each blip
+* The program take a picture and passes it to the CNN
+* The CNN determines the order of the blips
+* The system tells each blip what the order is and the blip displays it
 
 ![alt text](https://github.com/enyeartc/blipgit/blob/master/screencap.gif)
 
